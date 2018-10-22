@@ -2,27 +2,31 @@
 <html>
 
 <head>
-    <title>Creating a Basic Table</title>
+    <title>Styling a Table</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        table {
-            width: 95%;
-            border-spacing: 10px;
-        }
-        
         th {
-            text-align: left;
-        }
-        
-        table,
-        td,
-        th {
-            border: 1px solid black;
-        }
-        
-        td,
-        th {
+            color: darkmagenta;
+            text-align: center;
             padding: 15px;
+        }
+        
+        .headerrow th {
+            border-bottom: 3px solid black;
+        }
+        
+        .headercolumn th {
+            text-align: right;
+            border-right: 2px solid black;
+        }
+        
+        table {
+            width: 90%;
+            margin: 10px auto;
+        }
+        
+        .oddrow {
+            background: rgba( 237, 239, 190, .7)
         }
     </style>
 
@@ -32,7 +36,7 @@
     <div class="container">
         <header>
             <h1>
-            Creating a Basic Table
+            Styling a Table
             
             </h1>
             <nav>
@@ -43,35 +47,38 @@
         </header>
         <main>
             <table>
-                <caption>This is a table!</caption>
-                <tr>
-                    <th> header</th>
+
+                <tr class="headerrow">
+                    <th> </th>
                     <th> header</th>
                     <th> header</th>
                     <th> header</th>
                     <th> header</th>
                 </tr>
-                <tr>
+                <tr class="headercolumn oddrow">
                     <th> header</th>
                     <td> cell</td>
-                    <td> cell</td>
-                    <td colspan="2" style="background:darkgrey; font-weight:800;"> span 2 columns</td>
-                </tr>
-                <tr>
-                    <th> header</th>
-                    <td rowspan="2" style="background:darkgrey; font-weight:800;"> 2 rows</td>
-                    <td> cell</td>
-                    <td> cell</td>
-                    <td> cell</td>
-                </tr>
-                <tr>
-                    <th> header</th>
                     <td> cell</td>
                     <td> cell</td>
                     <td> cell</td>
 
                 </tr>
-                <tr>
+                <tr class="headercolumn">
+                    <th> header</th>
+                    <td> cell</td>
+                    <td> cell</td>
+                    <td> cell</td>
+                    <td> cell</td>
+                </tr>
+                <tr class="headercolumn oddrow">
+                    <th> header</th>
+                    <td> cell</td>
+                    <td> cell</td>
+                    <td> cell</td>
+                    <td> cell</td>
+
+                </tr>
+                <tr class="headercolumn">
                     <th> header</th>
                     <td> cell</td>
                     <td> cell</td>
@@ -82,6 +89,8 @@
 
 
             </table>
+
+
 
 
 
